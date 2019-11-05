@@ -630,7 +630,7 @@ class GimmeAWSCreds(object):
         if 'aws_selected_roles' in self._cache:
             return self._cache['aws_selected_roles']
         selected_roles = self._get_selected_roles(self.requested_roles, self.aws_roles)
-        self._cache['aws_aws_selected_roless'] = ret = [
+        self._cache['aws_selected_roles'] = ret = [
             role
             for role in self.aws_roles
             if role.role in selected_roles
